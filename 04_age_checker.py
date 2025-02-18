@@ -47,12 +47,12 @@ tickets_sold = 0
 
 while True:
 
-    name = input("Enter your name / xxx to quit: ")
+    name = not_blank("Enter your name / xxx to quit: ")
 
     if name == "xxx":
         break
 
-    age = int_checker("Age: ")
+    age = int_check("Age: ")
 
     if 12 <= age <= 120:
         pass
@@ -63,7 +63,7 @@ while True:
         print(f"{name} is too old")
         continue
 
-    pay_method = string_checker("Payment method: ".payment_list, 2)
-    print(f"{name} has brought a ticket ({pay_method}")
+    pay_method = string_checker("Payment method: ", payment_list, 2)
+    print(f"{name} has brought a ticket ({pay_method})")
 
     tickets_sold += 1
