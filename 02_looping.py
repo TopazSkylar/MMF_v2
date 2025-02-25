@@ -1,16 +1,17 @@
 # main routine starts here
 
 # Initialise ticket numbers
-MAX_TICKETS = 3
+MAX_TICKETS = 5
 tickets_sold = 0
 
 while tickets_sold < MAX_TICKETS:
     name = input("Please enter your name or 'xxx' to quit : ")
 
-    tickets_sold += 1
-
     if name == 'xxx':
         break
+
+    tickets_sold += 1
+
 
 # Output number of tickets sold
 if tickets_sold == MAX_TICKETS:
